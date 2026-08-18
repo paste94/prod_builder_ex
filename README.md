@@ -92,7 +92,7 @@ cd frontend
 
 ```json
 {
-  "gross_annual_salary": "35000",
+  "gross_salary": "35000",
   "salary_payments": 13,
   "contract_type": "PRIVATE"
 }

@@ -3,9 +3,6 @@ frontend/.dart_tool/
 frontend/.flutter-plugins
 frontend/.flutter-plugins-dependencies
 frontend/.packages
-frontend/build/1*
-frontend/build/flutter*
-frontend/build/native*
 # Python
 backend/.venv/
 backend/__pycache__/

@@ -54,7 +54,7 @@ class CakeDiagram extends StatelessWidget {
     final parts = text.split('.');
     final integerPart = parts[0];
     final decimalPart = parts[1];
-    return '€ $integerPart.$decimalPart';
+    return '€ $integerPart,$decimalPart';
   }
 
   @override
@@ -67,7 +67,6 @@ class CakeDiagram extends StatelessWidget {
     }
 
     return Card(
-      elevation: 1,
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -85,8 +84,8 @@ class CakeDiagram extends StatelessWidget {
               runSpacing: 16,
               children: [
                 SizedBox(
-                  width: 160,
-                  height: 160,
+                  width: 220,
+                  height: 220,
                   child: CustomPaint(
                     painter: _DonutChartPainter(slices: slices, total: total),
                     child: Center(
@@ -104,6 +103,20 @@ class CakeDiagram extends StatelessWidget {
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                               color: Color(0xFF2E7D32),
+                            ),
+                          ),
+                          const SizedBox(height: 16),
+                          const Text(
+                            'Monthly Salary',
+                            style: TextStyle(fontSize: 11, color: Colors.grey),
+                          ),
+                          Text(
+                            // '${((result.netSalary / total) * 100).toStringAsFixed(1)}%',
+                            _formatMoney(result.monthlySalary),
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 87, 87, 87),
                             ),
                           ),
                         ],

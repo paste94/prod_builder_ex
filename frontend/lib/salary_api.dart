@@ -2,7 +2,10 @@ import 'dart:convert';
 import 'package:frontend/models.dart';
 import 'package:http/http.dart' as http;
 
-const String backendUrl = 'http://localhost:8000';
+const String backendUrl = String.fromEnvironment(
+  'BACKEND_URL',
+  defaultValue: 'http://localhost:8000',
+);
 
 class SalaryApi {
   static Future<SalaryResponse> calculateNetSalary({

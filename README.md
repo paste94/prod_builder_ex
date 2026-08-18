@@ -17,3 +17,7 @@ Il backend ha il compito di calcolare il netto partendo da un reddito lordo. Il 
 uvicorn app.main:app --reload --port 8000
 ## backend tests
 pytest -v
+
+# Semplificazioni
+- Per una questione di semplicità, sono state inserite nel codice direttametne alcune informazioni che sarebbero dovute essere messe in un file di configurazione a parte (es aliquote, addizionali, ecc..) così come variabili di ambiente (url, porte ecc...). Si ritiene in ogni modo che per una demo la cosa non sia problematica, ma che sarebbe da correggere in un contesto produttivo.
+

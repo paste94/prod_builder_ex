@@ -18,3 +18,4 @@ backend/.pytest_cache/
 .idea/
 .vscode/
 .DS_Store
+curl.txt
